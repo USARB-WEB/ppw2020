@@ -1,3 +1,7 @@
+---
+Documentatie
++ http://htmlbook.ru/
+
 ___
 Editoare de cod
 ___
@@ -20,3 +24,6 @@ Editoare grafice
 ___
 GIT
 + https://git-scm.com/
+---
+Validarea codului
++ https://validator.w3.org/
