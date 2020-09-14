@@ -13,6 +13,10 @@ Online
 + https://jsfiddle.net/
 + https://jsbin.com/
 
+
+---
+Editoare grafice
++ https://www.figma.com/
 ___
 GIT
 + https://git-scm.com/
