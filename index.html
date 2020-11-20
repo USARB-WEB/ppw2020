@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script type="text/javascript">
+
+    class Person{
+        constructor(id, name){
+            this.id = id
+            this.name = name;
+        }
+
+        getId(){
+            return this.id;
+        }
+
+        getName(){
+            return this.name;
+        }
+    }
+
+
+    const persons = [];
+    persons.push(new Person(1, "Ion Creanga"));
+    persons.push(new Person(2, "Mihai Eminescu"));
+    console.log(persons);
+    console.log(persons.find(el => el.id === 2));
+
+
+    class PersonDAO{
+        constructor(){
+            this.persons = [];
+        }
+
+        create(person){
+            this.persons.push(person);
+        }
+
+        get(){
+            return this.persons;
+        }
+
+        getById(id){
+            return this.persons.find(el => el.id === id);
+        }
+    }
+
+
+    const personDAO = new PersonDAO();
+
+    personDAO.create(new Person(1, "Ion Creanga"));
+    personDAO.create(new Person(2, "Mihai Eminescu"));
+
+    console.log(personDAO.get());
+    console.log(personDAO.getById(1));
+    console.log(personDAO.getById(2));
+
+    // const elements = [];
+    // let n = 10;
+    // const result = [];
+    // let startTime = 0;
+    // let endTime = 0;
+
+
+    // while(n < 10000000) {
+    //     elements.splice(0, elements.length);
+    //     for (let i = 1; i < n; i++) {
+    //         let attributes = [];
+    //         for(let j = 0; j < 10; j++){
+    //             attributes.push(`Attr ${i}`);
+    //         }
+    //         elements.push({
+    //             id: i,
+    //             name: `Name ${i}`,
+    //             description: `${i} Description ${i}`,
+    //             attributes
+    //         })
+    //     }
+        
+    //     startTime = new Date().getTime();
+    //     for (const element of elements.filter(el => el.id %2 === 0)) {
+    //         for(const attribute of element.attributes) {
+    //             result.push(attribute);
+    //         }
+    //     }
+    //     endTime = new Date().getTime();
+    //     console.log(`Test (for+filter): n=${n}, time = ${endTime - startTime}`);   
+
+    //     startTime = new Date().getTime();
+    //     for (let index = 0; index < elements.length; index++) {
+    //         if (elements[index].id % 2 === 0){ 
+    //             for(const attribute of elements[index].attributes) {
+    //             result.push(attribute);
+    //         }
+    //         }
+    //     }
+    //     endTime = new Date().getTime();
+    //     console.log(`Test (for+if): n=${n}, time = ${endTime - startTime}`);        
+    //     n *= 10;
+    // }
+</script>
+</html>
