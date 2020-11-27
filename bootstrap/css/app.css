@@ -1,0 +1,12 @@
+footer{
+    height: 150px;
+    background-color: black;
+}
+
+.btn-primary{
+    background-color: blue;
+}
+
+.card-title{
+    text-align: center;
+}
